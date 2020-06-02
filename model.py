@@ -60,8 +60,8 @@ def _preprocess_data(data):
 
     # ----------- Replace this code with your own preprocessing steps --------
 
-    dataset1 = pd.read_csv('/Users/abdsh/regression-predict-api-template/utils/data/train_data.csv', index_col=0)
-    dataset2 = pd.read_csv('/Users/abdsh/regression-predict-api-template/utils/data/riders.csv', index_col=0)
+    dataset1 = pd.read_csv('/home/explore-student/regression-predict-api-template/utils/data/train_data.csv', index_col=0)
+    dataset2 = pd.read_csv('/home/explore-student/regression-predict-api-template/utils/data/riders.csv', index_col=0)
 
     train = pd.merge(dataset1, dataset2, how='left', on='Rider Id') 
 
@@ -113,7 +113,7 @@ def _preprocess_data(data):
     y_train = train_dummies['Time_from_Pickup_to_Arrival']
     X_train = train_dummies[X_corr_names]
 
-    dataset3 = pd.read_csv('/Users/abdsh/regression-predict-api-template/utils/data/test_data.csv', index_col=0)
+    dataset3 = pd.read_csv('/home/explore-student/regression-predict-api-template/utils/data/test_data.csv', index_col=0)
 
     test = pd.merge(dataset3, dataset2, how='left', on='Rider Id') 
 
